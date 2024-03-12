@@ -13,14 +13,14 @@ export const metadata: Metadata = {
   description: "Auth created by Next app",
 };
 
-export default function RootLayout({
+const RootLayout: React.FC<Readonly<{ children: React.ReactNode }>> = ({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}) => {
   return (
     <html lang="en">
       <body className={roboto.className}>{children}</body>
     </html>
   );
-}
+};
+
+export default RootLayout;
